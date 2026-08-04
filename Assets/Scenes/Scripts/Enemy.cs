@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
     public int maxHP = 3;
     public int contactDamage = 1;
     public float contactCooldown = 0.5f;   // seconds between hits on the player
+    public int CurrentHP => hp;              // public read-only access to hp
+    public float GazeMultiplier { get; private set; } = 1f;
 
     [Header("Drops")]
     public GameObject xpGemPrefab;         // spawned on death; leave empty for now
@@ -17,6 +19,7 @@ public class Enemy : MonoBehaviour
     Transform player;
     int hp;
     float contactTimer;
+    float gazeTimer;
 
     Animator animator;
     bool isDying = false;
@@ -63,6 +66,14 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         if (contactTimer > 0f) contactTimer -= Time.deltaTime;
+
+        // gaze debuff countdown
+        if (gazeTimer > 0f)
+        {
+            gazeTimer -= Time.deltaTime;
+            if (gazeTimer <= 0f)
+                GazeMultiplier = 1f;   // debuff expires, back to normal
+        }
     }
 
     public void TakeDamage(int amount)
@@ -93,19 +104,26 @@ public class Enemy : MonoBehaviour
         if (xpGemPrefab != null)
             Instantiate(xpGemPrefab, transform.position, Quaternion.identity);
 
-        // stop moving and stop colliding during the death animation
         rb.linearVelocity = Vector2.zero;
         GetComponent<Collider2D>().enabled = false;
 
-        if (animator != null)
+        if (animator != null && HasParameter("Death", animator))
         {
             animator.SetTrigger("Death");
-            Destroy(gameObject, 0.5f);   // match your death clip's length
+            Destroy(gameObject, 0.5f);
         }
         else
         {
             Destroy(gameObject);
         }
+    }
+
+    // helper: check if a parameter exists before using it
+    bool HasParameter(string paramName, Animator anim)
+    {
+        foreach (var p in anim.parameters)
+            if (p.name == paramName) return true;
+        return false;
     }
 
     // deal damage while touching the player, on a cooldown so it doesn't drain instantly
@@ -121,5 +139,10 @@ public class Enemy : MonoBehaviour
                 contactTimer = contactCooldown;
             }
         }
+    }
+    public void ApplyGaze(float multiplier, float duration)
+    {
+        GazeMultiplier = multiplier;
+        gazeTimer = duration;
     }
 }
