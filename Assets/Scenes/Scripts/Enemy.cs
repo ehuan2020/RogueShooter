@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 using System.Collections;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -12,6 +13,10 @@ public class Enemy : MonoBehaviour
     public int CurrentHP => hp;              // public read-only access to hp
     public float GazeMultiplier { get; private set; } = 1f;
     public float SlowMultiplier { get; private set; } = 1f;
+
+    // fired at the start of Die(), before the GameObject is destroyed - lets composed
+    // components (e.g. BossController) react to death without needing a virtual Die()
+    public event Action OnDied;
 
     [Header("Drops")]
     public GameObject xpGemPrefab;         // spawned on death; leave empty for now
@@ -116,6 +121,8 @@ public class Enemy : MonoBehaviour
     {
         if (isDying) return;
         isDying = true;
+
+        OnDied?.Invoke();
 
         if (GameManager.Instance != null)
             GameManager.Instance.RegisterKill();

@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: e63acdd8160267947a4d4146c99a4948
+guid: e2a2248be8ea0a444a98da4189450afa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2640888665324251627
-    second: EclipsedEye_Visual_0
+      213: -5424801601550950847
+    second: TheChoir_Idle_01_0
   - first:
-      213: 5391775654343740564
-    second: EclipsedEye_Visual_1
+      213: -6693330073339119253
+    second: TheChoir_Idle_01_1
+  - first:
+      213: -5728049973962936939
+    second: TheChoir_Idle_01_2
+  - first:
+      213: -8685524314411192134
+    second: TheChoir_Idle_01_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -155,13 +161,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EclipsedEye_Visual_0
+      name: TheChoir_Idle_01_0
       rect:
         serializedVersion: 2
-        x: 88
-        y: 233
-        width: 1811
-        height: 1817
+        x: 52
+        y: 102
+        width: 1292
+        height: 2015
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,20 +176,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5161efb30cda95bd0800000000000000
-      internalID: -2640888665324251627
+      spriteID: 14ed59a6fab37b4b0800000000000000
+      internalID: -5424801601550950847
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: EclipsedEye_Visual_1
+      name: TheChoir_Idle_01_1
       rect:
         serializedVersion: 2
-        x: 1790
-        y: 1225
-        width: 112
-        height: 261
+        x: 1041
+        y: 581
+        width: 868
+        height: 1526
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,8 +198,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 49c02c9046f63da40800000000000000
-      internalID: 5391775654343740564
+      spriteID: b69be26d2c38c13a0800000000000000
+      internalID: -6693330073339119253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheChoir_Idle_01_2
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 42
+        width: 84
+        height: 319
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59de04ea5e0e180b0800000000000000
+      internalID: -5728049973962936939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TheChoir_Idle_01_3
+      rect:
+        serializedVersion: 2
+        x: 1807
+        y: 95
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab0b08767a1d67780800000000000000
+      internalID: -8685524314411192134
       vertices: []
       indices: 
       edges: []
@@ -212,8 +262,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      EclipsedEye_Visual_0: -2640888665324251627
-      EclipsedEye_Visual_1: 5391775654343740564
+      TheChoir_Idle_01_0: -5424801601550950847
+      TheChoir_Idle_01_1: -6693330073339119253
+      TheChoir_Idle_01_2: -5728049973962936939
+      TheChoir_Idle_01_3: -8685524314411192134
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

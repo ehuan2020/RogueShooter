@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8457868458719416614}
   - component: {fileID: 2435243835811581184}
   - component: {fileID: 5296273190803797712}
-  - component: {fileID: 242029864559153211}
+  - component: {fileID: 2983004283611895419}
   m_Layer: 0
   m_Name: MinibossEnemy
   m_TagString: Enemy
@@ -183,25 +183,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.96, y: 5.01}
   m_EdgeRadius: 0
---- !u!95 &242029864559153211
-Animator:
-  serializedVersion: 7
+--- !u!114 &2983004283611895419
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2615967416403046118}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 97a3088890e1d814e8826a0e6c0b4215, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage:
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 558327c6faf940a29fd17438cff6ef31, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  definition: {fileID: 11400000, guid: 0b65ca80af1243aba7a32f8ccdf2d6ac, type: 2}
+  introDelay: 1
+  phaseChangeColor: {r: 1, g: 1, b: 1, a: 1}
+  phaseChangeRadius: 3
+  idleSprite: {fileID: 0}
+  telegraphSprite: {fileID: 0}
