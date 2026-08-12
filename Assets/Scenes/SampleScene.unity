@@ -1496,6 +1496,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 05af23fa3f24f7e4eb426ea9a808a023, type: 2}
   - {fileID: 11400000, guid: d810661f4a55285418ccdf5ec509a4d7, type: 2}
   - {fileID: 11400000, guid: ff634c11d85aa2c4caa08f0b29a65e9d, type: 2}
+  - {fileID: 11400000, guid: 1beb6a0739645a1df3bd39a1b8db9bc2, type: 2}
+  - {fileID: 11400000, guid: 882e3fb767688360297747b6da5d5797, type: 2}
+  - {fileID: 11400000, guid: e3acd0bf2dd77acb38ea1b25fc5f623f, type: 2}
   cardScreen: {fileID: 1623524580}
   player: {fileID: 2103047727}
 --- !u!4 &742176845

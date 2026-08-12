@@ -43,6 +43,13 @@ public class GodChorus : MonoBehaviour
         if (def != null) SpawnGod(def);
     }
 
+    // for cards that duplicate "a god" without the player choosing which one
+    public void DuplicateRandomGod()
+    {
+        if (active.Count == 0) return;
+        DuplicateGod(active[Random.Range(0, active.Count)].Definition.id);
+    }
+
     // evenly space all active gods around the orbit circle
     void RecalculateOrbitSlots()
     {

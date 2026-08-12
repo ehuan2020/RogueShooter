@@ -21,9 +21,12 @@ public class UpgradeCard : ScriptableObject
 
 public enum UpgradeType
 {
-    FireRate,       // lower interval = faster; amount = fraction faster (0.2 = 20% faster)
-    Damage,         // +amount damage
-    MoveSpeed,      // +amount move speed
-    MaxHP,          // +amount max HP
-    ProjectileCount // +amount extra projectiles (integer-ish)
+    FireRate,               // lower interval = faster; amount = fraction faster (0.2 = 20% faster)
+    Damage,                 // +amount damage
+    MoveSpeed,              // +amount move speed
+    MaxHP,                  // +amount max HP
+    ProjectileCount,        // +amount extra projectiles (integer-ish)
+    GodCooldownReduction,   // amount = fraction shorter god special cooldowns (0.15 = 15% shorter)
+    GodOrbitSpeed,          // amount = fraction faster god orbit speed (0.2 = 20% faster)
+    DuplicateGod            // amount unused; duplicates a random currently-equipped god
 }

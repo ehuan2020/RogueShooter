@@ -5,12 +5,14 @@ public class PlayerUpgrades : MonoBehaviour
     PlayerMovement movement;
     PlayerShooter shooter;
     PlayerHealth health;
+    GodChorus chorus;
 
     void Awake()
     {
         movement = GetComponent<PlayerMovement>();
         shooter = GetComponent<PlayerShooter>();
         health = GetComponent<PlayerHealth>();
+        chorus = GetComponent<GodChorus>();
     }
 
     public void ApplyUpgrade(UpgradeType type, float amount)
@@ -37,6 +39,18 @@ public class PlayerUpgrades : MonoBehaviour
 
             case UpgradeType.ProjectileCount:
                 shooter.extraProjectiles += Mathf.RoundToInt(amount);
+                break;
+
+            case UpgradeType.GodCooldownReduction:
+                chorus.ModifyAllCooldowns(1f - amount);
+                break;
+
+            case UpgradeType.GodOrbitSpeed:
+                chorus.ModifyOrbitSpeed(1f + amount);
+                break;
+
+            case UpgradeType.DuplicateGod:
+                chorus.DuplicateRandomGod();
                 break;
         }
     }
