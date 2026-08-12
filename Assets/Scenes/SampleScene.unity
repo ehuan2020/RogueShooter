@@ -2972,6 +2972,7 @@ GameObject:
   - component: {fileID: 2103047726}
   - component: {fileID: 2103047727}
   - component: {fileID: 2103047728}
+  - component: {fileID: 598181571}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3203,6 +3204,21 @@ MonoBehaviour:
   xpToNextLevel: 5
   levelGrowth: 1.4
   waveManager: {fileID: 742176844}
+--- !u!114 &598181571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103047719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f25e88bfe977d8d40bee0be8487ac2c7, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  equippedGods:
+  - {fileID: 11400000, guid: 8ff1991f254c4ccc83183af5c35c5cd2, type: 2}
+  baseOrbitSpeedMultiplier: 1
 --- !u!1 &2130591696
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04f41790417e19a43be05bd3909730d4, type: 3}
+  m_Name: God_EclipsedEye
+  m_EditorClassIdentifier:
+  id: eclipsed_eye
+  displayName: Eclipsed Eye
+  role: 0
+  unlockType: 0
+  cost: 0
+  orbitRadius: 2.5
+  orbitSpeed: 90
+  autoAttackRange: 6
+  autoAttackInterval: 1
+  autoAttackDamage: 3
+  autoAttackProjectile: {fileID: 6418915035470317929, guid: efeac2be5bea81d42b3b4c3f086cad10, type: 3}
+  autoAttackType: 0
+  special: {fileID: 11400000, guid: 725c1b8396b86f36d639a1fe22a0c0eb, type: 2}
+  specialCooldown: 8
+  visualPrefab: {fileID: 100000, guid: 990e073f742ccd76534324294467b65a, type: 3}

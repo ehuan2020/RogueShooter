@@ -29,7 +29,7 @@ public class Projectile : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             var enemy = other.GetComponent<Enemy>();
-            if (enemy != null) enemy.TakeDamage(damage);
+            if (enemy != null) DamageBus.Apply(enemy, damage);
             Destroy(gameObject);   // bullet dies on hit (remove this line for piercing)
         }
     }
