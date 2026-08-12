@@ -1,14 +1,15 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class GameOverScreen : MonoBehaviour
 {
     public GameObject panel;
-    public Text timeText;         // or TMP_Text
-    public Text levelText;
-    public Text killsText;
+    public TMP_Text timeText;
+    public TMP_Text levelText;
+    public TMP_Text killsText;
     public Button retryButton;
     public Button quitButton;     // optional
 
