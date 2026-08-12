@@ -15,7 +15,7 @@ public class GazeSpecial : GodSpecial
 
         DamageBus.Apply(target, beamDamage);
         target.ApplyGaze(damageMultiplier, gazeDuration);   // debuff hook on Enemy
-        // spawn beam VFX here
+        TempLineFlash.Spawn(god.transform.position, target.transform.position, Color.cyan, 0.15f);   // placeholder until real beam VFX exists
     }
 
     Enemy FindHighestHPEnemy()

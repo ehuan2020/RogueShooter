@@ -14,6 +14,9 @@ public class GodCompanion : MonoBehaviour
     GodSpecial specialInstance;
     float specialTimer;        // counts down; 0 = ready
 
+    public bool IsDashing { get; private set; }
+    public void SetDashing(bool value) => IsDashing = value;
+
     public void Init(GodDefinition def, GodChorus owner)
     {
         Definition = def;
@@ -35,12 +38,17 @@ public class GodCompanion : MonoBehaviour
     void Update()
     {
         Orbit();
-        AutoAttack();
+        if (Definition.autoAttackType == GodAutoAttackType.Aura)
+            TickAura();
+        else
+            AutoAttack();
         TickSpecialCooldown();
     }
 
     void Orbit()
     {
+        if (IsDashing) return;   // special has taken direct control of transform.position
+
         orbitAngle += Definition.orbitSpeed * chorus.baseOrbitSpeedMultiplier * Time.deltaTime;
         float rad = orbitAngle * Mathf.Deg2Rad;
         Vector3 offset = new Vector3(Mathf.Cos(rad), Mathf.Sin(rad), 0f) * Definition.orbitRadius;
@@ -63,12 +71,25 @@ public class GodCompanion : MonoBehaviour
             case GodAutoAttackType.MeleeSnap:
                 MeleeSnap(target);
                 break;
-            case GodAutoAttackType.Aura:
-                // aura is passive/continuous; handled separately, no timed attack
-                break;
         }
 
         attackTimer = Definition.autoAttackInterval;
+    }
+
+    // continuous slow field around this companion; re-evaluated every frame instead of on the attack-interval timer.
+    // refreshes a short self-expiring debuff on Enemy rather than tracking enter/exit, so it clears itself
+    // automatically once an enemy leaves range or this companion is removed.
+    void TickAura()
+    {
+        var enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (var e in enemies)
+        {
+            var enemy = e.GetComponent<Enemy>();
+            if (enemy == null) continue;
+
+            if (Vector2.Distance(transform.position, enemy.transform.position) <= Definition.autoAttackRange)
+                enemy.SetSlow(Definition.auraSlowMultiplier, 0.25f);
+        }
     }
 
     void FireProjectile(Transform target)

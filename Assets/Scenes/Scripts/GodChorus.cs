@@ -62,5 +62,12 @@ public class GodChorus : MonoBehaviour
         baseOrbitSpeedMultiplier *= multiplier;
     }
 
+    // called by input handling to fire a specific equipped god's special
+    public void TriggerSpecial(int index)
+    {
+        if (index >= 0 && index < active.Count)
+            active[index].TryTriggerSpecial();
+    }
+
     public IReadOnlyList<GodCompanion> Active => active;
 }

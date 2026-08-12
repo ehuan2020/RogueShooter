@@ -23,9 +23,10 @@ public class GodDefinition : ScriptableObject
     public int autoAttackDamage = 2;
     public GameObject autoAttackProjectile;   // null = melee/aura god (handled by behaviour)
     public GodAutoAttackType autoAttackType = GodAutoAttackType.Projectile;
+    public float auraSlowMultiplier = 0.5f;   // only used when autoAttackType == Aura
 
     [Header("Special")]
-    public GodSpecial special;        // a GodSpecial asset (see below) — the triggered ability
+    public GodSpecial special;        // a GodSpecial asset (see below) ï¿½ the triggered ability
     public float specialCooldown = 8f;
 
     [Header("Visuals")]

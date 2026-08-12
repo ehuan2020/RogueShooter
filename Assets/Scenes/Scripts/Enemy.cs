@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     public float contactCooldown = 0.5f;   // seconds between hits on the player
     public int CurrentHP => hp;              // public read-only access to hp
     public float GazeMultiplier { get; private set; } = 1f;
+    public float SlowMultiplier { get; private set; } = 1f;
 
     [Header("Drops")]
     public GameObject xpGemPrefab;         // spawned on death; leave empty for now
@@ -20,6 +21,9 @@ public class Enemy : MonoBehaviour
     int hp;
     float contactTimer;
     float gazeTimer;
+    float slowTimer;
+    float knockbackTimer;
+    Vector2 knockbackVelocity;
 
     Animator animator;
     bool isDying = false;
@@ -50,9 +54,16 @@ public class Enemy : MonoBehaviour
     {
         if (player == null) return;
 
+        if (knockbackTimer > 0f)
+        {
+            knockbackTimer -= Time.fixedDeltaTime;
+            rb.linearVelocity = knockbackVelocity;
+            return;   // being knocked back overrides normal seek this tick
+        }
+
         // ---- DIRECT SEEK: move straight toward the player ----
         Vector2 dir = ((Vector2)player.position - rb.position).normalized;
-        rb.linearVelocity = dir * moveSpeed;
+        rb.linearVelocity = dir * moveSpeed * SlowMultiplier;
 
         // optional: flip sprite to face travel direction
         if (dir.x != 0)
@@ -73,6 +84,14 @@ public class Enemy : MonoBehaviour
             gazeTimer -= Time.deltaTime;
             if (gazeTimer <= 0f)
                 GazeMultiplier = 1f;   // debuff expires, back to normal
+        }
+
+        // slow debuff countdown
+        if (slowTimer > 0f)
+        {
+            slowTimer -= Time.deltaTime;
+            if (slowTimer <= 0f)
+                SlowMultiplier = 1f;
         }
     }
 
@@ -144,5 +163,19 @@ public class Enemy : MonoBehaviour
     {
         GazeMultiplier = multiplier;
         gazeTimer = duration;
+    }
+
+    // self-expiring like ApplyGaze; callers refresh this each frame the enemy stays in a slow field
+    public void SetSlow(float multiplier, float duration)
+    {
+        SlowMultiplier = multiplier;
+        slowTimer = duration;
+    }
+
+    // overrides normal seek movement for a short window so knockback isn't stomped by FixedUpdate's chase logic
+    public void ApplyKnockback(Vector2 velocity, float duration)
+    {
+        knockbackVelocity = velocity;
+        knockbackTimer = duration;
     }
 }
