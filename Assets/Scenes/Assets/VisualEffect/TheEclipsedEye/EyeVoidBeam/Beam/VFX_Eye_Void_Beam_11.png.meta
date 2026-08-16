@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: 4fe940973b0f63f46af86b6376974562
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1646313146292595767
+    second: VFX_Eye_Void_Beam_11_0
+  - first:
+      213: 4206241888887792420
+    second: VFX_Eye_Void_Beam_11_1
+  - first:
+      213: -255996074385988111
+    second: VFX_Eye_Void_Beam_11_2
+  - first:
+      213: 5303910338065271581
+    second: VFX_Eye_Void_Beam_11_3
+  - first:
+      213: 6564280767211988800
+    second: VFX_Eye_Void_Beam_11_4
+  - first:
+      213: -8004637198999264680
+    second: VFX_Eye_Void_Beam_11_5
+  - first:
+      213: -9104814502736326630
+    second: VFX_Eye_Void_Beam_11_6
+  - first:
+      213: -6775009428975954630
+    second: VFX_Eye_Void_Beam_11_7
+  - first:
+      213: 3213816613948072435
+    second: VFX_Eye_Void_Beam_11_8
+  - first:
+      213: 2624945762826929080
+    second: VFX_Eye_Void_Beam_11_9
+  - first:
+      213: -5626003159659904613
+    second: VFX_Eye_Void_Beam_11_10
+  - first:
+      213: 2705174405368645679
+    second: VFX_Eye_Void_Beam_11_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: VFX_Eye_Void_Beam_11_0
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 863
+        width: 35
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73c63d18511e8d610800000000000000
+      internalID: 1646313146292595767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_Eye_Void_Beam_11_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 114
+        width: 1874
+        height: 655
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 423668a56b29f5a30800000000000000
+      internalID: 4206241888887792420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_Eye_Void_Beam_11_2
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 762
+        width: 84
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f5245a3de4827cf0800000000000000
+      internalID: -255996074385988111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_Eye_Void_Beam_11_3
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 57
+        width: 47
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1b07e4e9564b9940800000000000000
+      internalID: 5303910338065271581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_Eye_Void_Beam_11_4
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 99
+        width: 53
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04769972492091b50800000000000000
+      internalID: 6564280767211988800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_Eye_Void_Beam_11_5
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 96
+        width: 46
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85265cdb0e0d9e090800000000000000
+      internalID: -8004637198999264680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_Eye_Void_Beam_11_6
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 65
+        width: 41
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a10939af27335a180800000000000000
+      internalID: -9104814502736326630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_Eye_Void_Beam_11_7
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 83
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3557f3e1d45af1a0800000000000000
+      internalID: -6775009428975954630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_Eye_Void_Beam_11_8
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 76
+        width: 55
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f1af9fce25c99c20800000000000000
+      internalID: 3213816613948072435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_Eye_Void_Beam_11_9
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 31
+        width: 72
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b347f3834ead6420800000000000000
+      internalID: 2624945762826929080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_Eye_Void_Beam_11_10
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 0
+        width: 104
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b910f332feb6ce1b0800000000000000
+      internalID: -5626003159659904613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VFX_Eye_Void_Beam_11_11
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 0
+        width: 48
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f280a7ff9c5ba8520800000000000000
+      internalID: 2705174405368645679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      VFX_Eye_Void_Beam_11_0: 1646313146292595767
+      VFX_Eye_Void_Beam_11_1: 4206241888887792420
+      VFX_Eye_Void_Beam_11_10: -5626003159659904613
+      VFX_Eye_Void_Beam_11_11: 2705174405368645679
+      VFX_Eye_Void_Beam_11_2: -255996074385988111
+      VFX_Eye_Void_Beam_11_3: 5303910338065271581
+      VFX_Eye_Void_Beam_11_4: 6564280767211988800
+      VFX_Eye_Void_Beam_11_5: -8004637198999264680
+      VFX_Eye_Void_Beam_11_6: -9104814502736326630
+      VFX_Eye_Void_Beam_11_7: -6775009428975954630
+      VFX_Eye_Void_Beam_11_8: 3213816613948072435
+      VFX_Eye_Void_Beam_11_9: 2624945762826929080
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
