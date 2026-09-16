@@ -63,6 +63,7 @@ public class BossController : MonoBehaviour
 
         phaseIndex++;
         TempLineFlash.SpawnCircle(transform.position, phaseChangeRadius, phaseChangeColor, 0.4f);
+        ScreenShake.Trigger(0.3f, 0.3f);
         attackTimer = Mathf.Max(attackTimer, 0.75f);   // brief readable beat before the next attack
     }
 

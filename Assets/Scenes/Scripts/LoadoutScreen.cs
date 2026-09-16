@@ -11,7 +11,7 @@ public class LoadoutScreen : MonoBehaviour
     [Header("The god slots (one per available god)")]
     public GodSlot[] slots;
 
-    [Header("Every god that exists today - no ownership system yet")]
+    [Header("Every god that exists today - filtered to what's owned at runtime")]
     public List<GodDefinition> availableRoster;
 
     [Header("Confirm")]
@@ -22,20 +22,39 @@ public class LoadoutScreen : MonoBehaviour
     public RoundDirector roundDirector;
 
     readonly HashSet<GodDefinition> selected = new HashSet<GodDefinition>();
+    List<GodDefinition> owned;
 
     void Awake()
     {
         Time.timeScale = 0f;
+        panel.SetActive(false);   // stays hidden until the mastery screen's Continue - it defaults to active in the scene
+
+        var save = SaveManager.Current;
+        owned = availableRoster.Where(g => save.ownedGodIds.Contains(g.id)).ToList();
+
+        var mastery = gameObject.AddComponent<MasteryScreen>();
+        mastery.ShowThenContinue(owned, ShowLoadoutPanel);
+    }
+
+    void ShowLoadoutPanel()
+    {
         panel.SetActive(true);
+
+        var save = SaveManager.Current;
+
+        // resume the last saved loadout if there is one; otherwise default to
+        // fully-equipped, matching the "3 slots from the start" pillar
+        bool hasSavedLoadout = save.equippedGodIds.Count > 0;
 
         for (int i = 0; i < slots.Length; i++)
         {
-            if (i < availableRoster.Count)
+            if (i < owned.Count)
             {
-                var god = availableRoster[i];
+                var god = owned[i];
+                bool startSelected = hasSavedLoadout ? save.equippedGodIds.Contains(god.id) : true;
                 slots[i].gameObject.SetActive(true);
-                selected.Add(god);   // default to fully-equipped, matching the "3 slots from the start" pillar
-                slots[i].Setup(god, true, HandleToggle);
+                if (startSelected) selected.Add(god);
+                slots[i].Setup(god, startSelected, HandleToggle);
             }
             else
             {
@@ -64,6 +83,9 @@ public class LoadoutScreen : MonoBehaviour
     void HandleStart()
     {
         chorus.equippedGods = selected.ToList();
+
+        SaveManager.Current.equippedGodIds = selected.Select(g => g.id).ToList();
+        SaveManager.Save();
 
         panel.SetActive(false);
         Time.timeScale = 1f;

@@ -3177,6 +3177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 6418915035470317929, guid: efeac2be5bea81d42b3b4c3f086cad10, type: 3}
+  muzzleFlashPrefab: {fileID: 100000, guid: fd77bd2614a541dbb2102500697b184a, type: 3}
   firePoint: {fileID: 845102600}
   autoFireInterval: 0.6
   manualFireInterval: 0.25

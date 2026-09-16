@@ -45,6 +45,7 @@ public class PlayerHealth : MonoBehaviour
         currentHP -= amount;
         invulnTimer = invulnTime;
         OnHealthChanged?.Invoke(currentHP, maxHP);
+        ScreenShake.Trigger(0.15f, 0.15f);
 
         if (sprite != null) StartCoroutine(FlashRed());
 
@@ -73,6 +74,7 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         isDead = true;
+        ScreenShake.Trigger(0.4f, 0.35f);
         OnDied?.Invoke();
         // for now, just stop the player. GameManager will handle the game-over screen later.
         Debug.Log("Player died");

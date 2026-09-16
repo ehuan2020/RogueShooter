@@ -4,6 +4,7 @@ public class PlayerShooter : MonoBehaviour
 {
     [Header("Refs")]
     public GameObject projectilePrefab;
+    public GameObject muzzleFlashPrefab;
     public Transform firePoint;        // empty child at the player's center/muzzle; defaults to self
 
     [Header("Fire Rates (seconds between shots)")]
@@ -67,6 +68,9 @@ public class PlayerShooter : MonoBehaviour
     {
         int totalProjectiles = 1 + extraProjectiles;
         Vector2 baseDir = direction.normalized;
+
+        // muzzleFlashPrefab is intentionally NOT played here - reserved for a future
+        // charged/special attack (none exists yet); normal shots stay as they were
 
         // Calculate starting angle offset so spread centers around aiming direction
         float startAngle = -spreadAngle * (totalProjectiles - 1) / 2f;

@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -7460360001433435674, guid: 954cd947398d55b4297dea545afdacee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -88,7 +88,7 @@ SpriteRenderer:
   m_Size: {x: 3.96, y: 5.01}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &8457868458719416614
@@ -199,5 +199,5 @@ MonoBehaviour:
   introDelay: 1
   phaseChangeColor: {r: 1, g: 1, b: 1, a: 1}
   phaseChangeRadius: 3
-  idleSprite: {fileID: 0}
+  idleSprite: {fileID: -7460360001433435674, guid: 954cd947398d55b4297dea545afdacee, type: 3}
   telegraphSprite: {fileID: 0}

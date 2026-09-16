@@ -178,3 +178,13 @@ MonoBehaviour:
   speed: 14
   damage: 1
   lifetime: 3
+  impactPrefab: {fileID: 100000, guid: c95fe24338964739a0c210e77ea57229, type: 3}
+  bulletFrames:
+  - {fileID: -1733088422525402570, guid: d27cf880712f8f64cbfcd8f98f750cdb, type: 3}
+  - {fileID: -6868453940988433833, guid: eb969fb07ccea2a4193feb6559ac4596, type: 3}
+  - {fileID: 7634232376747195010, guid: 7ad6d465bd5caf7498ba68b56fcf5389, type: 3}
+  - {fileID: 7558933864473478520, guid: 1aa0a7e507b7c3a43b77c4575595f040, type: 3}
+  - {fileID: -8730442167357911514, guid: 3bace78e7cffed6499326d0759fc8011, type: 3}
+  - {fileID: -6468065235019686147, guid: 543fb77e85adcc545b891e4b62fb747a, type: 3}
+  - {fileID: 4774456989613561011, guid: 40ecb0efcc5e1db4cb7475fab7010646, type: 3}
+  - {fileID: 1637249217726640249, guid: 54c8ad2405e6f6b41897f1a3b7a40795, type: 3}

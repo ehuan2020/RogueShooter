@@ -118,13 +118,21 @@ public class RoundDirector : MonoBehaviour
         Time.timeScale = 0f;
         OnVictory?.Invoke();
 
+        var gm = GameManager.Instance;
+        int kills = gm != null ? gm.enemiesKilled : 0;
+
+        // always granted, independent of whether the UI reference happens to be wired -
+        // "no run ever earns nothing" shouldn't hinge on an inspector field
+        int coinsEarned = kills + 50;   // flat clear bonus on top of kill coins
+        SaveManager.AddCoins(coinsEarned);
+        SaveManager.AddBossTokens(1);
+        SaveManager.Save();
+
         if (winScreen != null)
         {
-            var gm = GameManager.Instance;
             float time = gm != null ? gm.timeSurvived : 0f;
-            int kills = gm != null ? gm.enemiesKilled : 0;
             int level = (gm != null && gm.xpManager != null) ? gm.xpManager.currentLevel : 1;
-            winScreen.Show(time, level, kills);
+            winScreen.Show(time, level, kills, coinsEarned);
         }
     }
 }

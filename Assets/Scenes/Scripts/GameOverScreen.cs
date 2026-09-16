@@ -10,6 +10,7 @@ public class GameOverScreen : MonoBehaviour
     public TMP_Text timeText;
     public TMP_Text levelText;
     public TMP_Text killsText;
+    public TMP_Text coinsText;
     public Button retryButton;
     public Button quitButton;     // optional
 
@@ -20,7 +21,7 @@ public class GameOverScreen : MonoBehaviour
         if (quitButton != null) quitButton.onClick.AddListener(Quit);
     }
 
-    public void Show(float timeSurvived, int level, int kills)
+    public void Show(float timeSurvived, int level, int kills, int coinsEarned = 0)
     {
         panel.SetActive(true);
 
@@ -29,6 +30,7 @@ public class GameOverScreen : MonoBehaviour
         if (timeText != null) timeText.text = $"Time Survived: {minutes:00}:{seconds:00}";
         if (levelText != null) levelText.text = $"Level Reached: {level}";
         if (killsText != null) killsText.text = $"Enemies Killed: {kills}";
+        if (coinsText != null) coinsText.text = $"Coins Earned: {coinsEarned} (Total: {SaveManager.Current.coins})";
     }
 
     void Retry()

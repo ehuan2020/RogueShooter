@@ -40,6 +40,8 @@ public class Enemy : MonoBehaviour
     void Awake()
     {
         if (sr == null) sr = GetComponentInChildren<SpriteRenderer>();
+        if (sr != null && sr.sprite == null)
+            sr.sprite = PlaceholderSprite.Circle;   // no real art yet (e.g. the miniboss) - keeps the prefab's own tint, just makes it visible
         if (sr != null) originalColor = sr.color;
         animator = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody2D>();

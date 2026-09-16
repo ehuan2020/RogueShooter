@@ -48,7 +48,11 @@ public class GameManager : MonoBehaviour
 
         Time.timeScale = 0f;   // freeze everything
 
+        int coinsEarned = enemiesKilled;   // 1 coin/kill for now - simple to retune later
+        SaveManager.AddCoins(coinsEarned);
+        SaveManager.Save();
+
         int level = (xpManager != null) ? xpManager.currentLevel : 1;
-        gameOverScreen.Show(timeSurvived, level, enemiesKilled);
+        gameOverScreen.Show(timeSurvived, level, enemiesKilled, coinsEarned);
     }
 }

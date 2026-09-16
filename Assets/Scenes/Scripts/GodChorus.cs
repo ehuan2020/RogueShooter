@@ -50,12 +50,18 @@ public class GodChorus : MonoBehaviour
         DuplicateGod(active[Random.Range(0, active.Count)].Definition.id);
     }
 
-    // evenly space all active gods around the orbit circle
+    // clusters all active gods in a fixed arc up-and-to-the-left of the player ("tail"
+    // slots), not spread around a full circle - narrow enough that a few gods stay
+    // visually grouped together rather than orbiting to different sides
+    const float ClusterBaseAngle = 135f;   // up-and-left
+    const float ClusterSpreadPerGod = 25f;
+
     void RecalculateOrbitSlots()
     {
         int n = active.Count;
+        float start = ClusterBaseAngle - ClusterSpreadPerGod * (n - 1) / 2f;
         for (int i = 0; i < n; i++)
-            active[i].SetOrbitPhase((360f / n) * i);
+            active[i].SetOrbitPhase(start + ClusterSpreadPerGod * i);
     }
 
     // cards that affect all gods route through here
